@@ -1,0 +1,6 @@
+[submodule "thirdparty/mxnet"]
+	path = thirdparty/mxnet
+	url = http://github.com/h2oai/mxnet
+[submodule "thirdparty/protobuf-gradle-plugin"]
+	path = thirdparty/protobuf-gradle-plugin
+	url = https://github.com/google/protobuf-gradle-plugin.git

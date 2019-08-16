@@ -1,0 +1,22 @@
+rootProject.name = 'deepwater'
+
+// interface
+include 'backend-api'
+
+// implementations
+if (!isGradlePropSet("buildOnlyBackendApi")) {
+  include 'mxnet'
+  include 'tensorflow'
+}
+
+
+// helper methods
+def isGradlePropSet(String propName){
+  return startParameter.projectProperties.get(propName, null) != null
+}
+
+// Prefix all projects with root project name
+rootProject.children.each { project ->
+    project.name = rootProject.name + "-" + project.name
+    println(project.name)
+}
